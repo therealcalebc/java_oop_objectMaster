@@ -18,11 +18,12 @@ public class Human {
 		_health = 100;
 	}
 	
-	public void reduceHealth(int amount) { _health -= amount; }
+	public int getHealth() { return _health; }
+	public void decreaseHealth(int amount) { _health -= amount; }
 	public void increaseHealth(int amount) { _health += amount; }
 	
 	public void attack(Human other) {
-		other.reduceHealth(this._strength);
+		other.decreaseHealth(this._strength);
 	}
 	
 	public void displayStats() {
